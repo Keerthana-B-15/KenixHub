@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kenix - Your Technology Partner</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(90deg, #3B82F6 0%, #8B5CF6 100%);
+        }
+        
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.1) 0%, rgba(139, 92, 246, 0.05) 50%, transparent 100%);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .navbar-sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            backdrop-filter: blur(8px);
+            background-color: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+    <!-- Navigation -->
+    <header id="navbar" class="py-4 px-6 md:px-12 transition-all duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <a href="#" class="font-bold text-2xl">
+                    <span class="gradient-text">KenixHub</span>
+                </a>
+            </div>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-gray-600 hover:text-gray-900 font-medium">Services</a>
+                <a href="#portfolio" class="text-gray-600 hover:text-gray-900 font-medium">Portfolio</a>
+                <a href="#process" class="text-gray-600 hover:text-gray-900 font-medium">Process</a>
+                <a href="#pricing" class="text-gray-600 hover:text-gray-900 font-medium">Pricing</a>
+                <a href="#contact" class="text-gray-600 hover:text-gray-900 font-medium">Contact</a>
+            </nav>
+            <div class="hidden md:flex items-center space-x-4">
+                <a href="#contact" class="gradient-bg text-white px-5 py-2 rounded-md font-medium transition hover:opacity-90">Get a Quote</a>
+            </div>
+            <button class="md:hidden text-gray-700" id="mobile-menu-button">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+<section class="pt-24 pb-16 md:pt-32 md:pb-24 px-6 hero-gradient">
+    <div class="container mx-auto max-w-6xl">
+        <div class="flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                    Bringing Your <span class="gradient-text">Digital Vision</span> To Life
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    From websites and apps to AI models and design solutions, Kenix delivers top-tier tech services for businesses of all sizes.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#services" class="gradient-bg text-white px-8 py-3 rounded-md font-medium hover:opacity-90 transition text-center">
+                        Explore Services
+                    </a>
+                    <a href="#contact" class="bg-white text-blue-600 border border-blue-600 px-8 py-3 rounded-md font-medium hover:bg-blue-50 transition text-center">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+            <div class="lg:w-1/2">
+                <div class="relative">
+                    <div id="lottie-container" class="bg-white rounded-xl shadow-xl overflow-hidden"></div>
+                    <div id="floating-text" class="absolute -bottom-4 -right-4 bg-indigo-100 text-indigo-600 rounded-lg px-4 py-2 shadow-md">
+                        <span class="font-medium">Tech solutions that deliver</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    #lottie-container {
+        width: 100%;
+        height: 400px; /* Adjust height */
+    }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var container = document.getElementById("lottie-container");
+        if (container) {
+            var animation = lottie.loadAnimation({
+                container: container,
+                renderer: 'svg',
+                loop: true,
+                autoplay: true,
+                path: 'Animation - 1740651373991.json' // Replace with a working Lottie JSON file URL
+            });
+
+            console.log("Lottie Animation Loaded:", animation); // Debugging
+
+            gsap.from("#floating-text", { opacity: 0, y: 20, duration: 1, ease: "power2.out" });
+        } else {
+            console.error("Lottie container not found!");
+        }
+    });
+</script>
+
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We offer a comprehensive range of tech services to help your business thrive in the digital landscape.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Website Development -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-blue-100 text-blue-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-laptop-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Website Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Custom responsive websites that look great on any device and drive business results.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>E-commerce platforms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Corporate websites</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Landing pages</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- App Development -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-purple-100 text-purple-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">App Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Native and cross-platform mobile applications for iOS and Android devices.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Native iOS & Android</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Cross-platform solutions</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>App maintenance & updates</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- UI/UX Design -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-pink-100 text-pink-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-palette text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">UI/UX Design</h3>
+                    <p class="text-gray-600 mb-4">
+                        User-centered design that enhances user experience and increases conversion rates.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>User interface design</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>User experience optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Prototyping & wireframing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Video & Photo Editing -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-red-100 text-red-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-film text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Video & Photo Editing</h3>
+                    <p class="text-gray-600 mb-4">
+                        Professional editing services to enhance your visual content and brand image.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Professional video editing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Photo retouching & enhancement</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Motion graphics & animation</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- AI/ML Development -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-green-100 text-green-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">AI/ML Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Cutting-edge artificial intelligence and machine learning solutions for your business.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Custom AI model development</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Predictive analytics</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Natural language processing</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+                
+                <!-- Algorithm Development -->
+                <div class="service-card bg-white rounded-xl border border-gray-200 p-6 transition duration-300">
+                    <div class="bg-yellow-100 text-yellow-600 rounded-full w-14 h-14 flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">Algorithm Development</h3>
+                    <p class="text-gray-600 mb-4">
+                        Custom algorithms to solve complex problems and optimize your business processes.
+                    </p>
+                    <ul class="space-y-2 mb-6">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Algorithm design & optimization</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Data processing algorithms</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                            <span>Performance optimization</span>
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                        Learn more
+                        <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative">
+                        <div class="bg-white rounded-xl shadow-xl overflow-hidden">
+                            <img src="KenixHub.jpg" alt="Our Team" class="w-full h-auto" />
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 bg-blue-100 text-blue-600 rounded-lg px-4 py-2 shadow-md">
+                            <span class="font-medium">Expert team of professionals</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Why Choose Kenix?</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        We combine technical expertise with creative thinking to deliver solutions that exceed expectations.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-indigo-100 text-indigo-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Expert Team</h3>
+                                <p class="text-gray-600">Our team consists of skilled professionals with years of experience in their respective fields.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-indigo-100 text-indigo-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Innovative Solutions</h3>
+                                <p class="text-gray-600">We stay ahead of the curve by implementing the latest technologies and industry best practices.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-indigo-100 text-indigo-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Dedicated Support</h3>
+                                <p class="text-gray-600">We provide ongoing support and maintenance to ensure your solutions continue to perform optimally.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-indigo-100 text-indigo-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Timely Delivery</h3>
+                                <p class="text-gray-600">We understand the importance of deadlines and ensure projects are delivered on time, every time.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Portfolio</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Take a look at some of our recent projects and see how we've helped businesses achieve their goals.
+                </p>
+            </div>
+            
+                <!-- Portfolio Item 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="Ecommerce.jpg" alt="E-commerce Website" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">E-commerce Platform</h3>
+                                <p class="text-gray-200">Website Development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">E-commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">A full-featured online store with inventory management and payment processing.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="fitnesstrackingapp.jpg" alt="Mobile App" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Fitness Tracking App</h3>
+                                <p class="text-gray-200">App Development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Fitness Tracking App</h3>
+                        <p class="text-gray-600 mb-4">A mobile application that helps users track workouts and monitor progress.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="PredictiveAnalyticsTool.jpg" alt="AI Solution" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Predictive Analytics Tool</h3>
+                                <p class="text-gray-200">AI/ML Development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Predictive Analytics Tool</h3>
+                        <p class="text-gray-600 mb-4">An AI-powered tool that helps businesses forecast trends and make data-driven decisions.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 4 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="CorporateWebsiteRedesign.jpg" alt="Corporate Website" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Corporate Website Redesign</h3>
+                                <p class="text-gray-200">UI/UX Design</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Corporate Website Redesign</h3>
+                        <p class="text-gray-600 mb-4">A complete overhaul of a corporate website with a focus on improved user experience.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 5 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="promo.jpg" alt="Video Production" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Product Promotional Video</h3>
+                                <p class="text-gray-200">Video Editing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Product Promotional Video</h3>
+                        <p class="text-gray-600 mb-4">A high-quality promotional video showcasing a client's product features and benefits.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Portfolio Item 6 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md group">
+                    <div class="relative overflow-hidden">
+                        <img src="algo.jpg" alt="Algorithm Development" class="w-full h-64 object-cover transition duration-300 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-6">
+                            <div>
+                                <h3 class="text-white text-xl font-bold mb-2">Data Processing Algorithm</h3>
+                                <p class="text-gray-200">Algorithm Development</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2">Data Processing Algorithm</h3>
+                        <p class="text-gray-600 mb-4">A custom algorithm that streamlines data processing and analysis for a finance company.</p>
+                        <a href="#" class="text-blue-600 font-medium hover:text-blue-800 inline-flex items-center">
+                            View Case Study
+                            <i class="fas fa-arrow-right ml-2 text-sm"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="text-center mt-12">
+                    <a href="#" class="gradient-bg text-white px-8 py-3 rounded-md font-medium hover:opacity-90 transition">
+                        View All Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Our Process</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    We follow a systematic approach to ensure project success and client satisfaction.
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Process Timeline -->
+                <div class="hidden md:block absolute left-1/2 top-0 bottom-0 w-1 bg-blue-200 transform -translate-x-1/2"></div>
+                
+                <div class="space-y-12 md:space-y-0">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-2xl font-bold mb-3">Discovery</h3>
+                            <p class="text-gray-600">
+                                We start by understanding your business goals, target audience, and project requirements to lay a solid foundation.
+                            </p>
+                        </div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                1
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col md:flex-row items-center md:mt-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-1 md:order-none"></div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0 order-first md:order-none">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                2
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left order-last md:order-none">
+                            <h3 class="text-2xl font-bold mb-3">Planning & Strategy</h3>
+                            <p class="text-gray-600">
+                                We create a detailed project plan, define milestones, and develop strategies to achieve your business objectives.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col md:flex-row items-center md:mt-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-2xl font-bold mb-3">Design & Development</h3>
+                            <p class="text-gray-600">
+                                Our team designs and develops your solution with a focus on quality, functionality, and user experience.
+                            </p>
+                        </div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                3
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- Step 4 -->
+                    <div class="flex flex-col md:flex-row items-center md:mt-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-1 md:order-none"></div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0 order-first md:order-none">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                4
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left order-last md:order-none">
+                            <h3 class="text-2xl font-bold mb-3">Testing & Quality Assurance</h3>
+                            <p class="text-gray-600">
+                                We rigorously test your solution to ensure it meets the highest standards of quality and performance.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 5 -->
+                    <div class="flex flex-col md:flex-row items-center md:mt-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 md:text-right">
+                            <h3 class="text-2xl font-bold mb-3">Deployment & Launch</h3>
+                            <p class="text-gray-600">
+                                We handle the deployment process and ensure a successful launch of your solution.
+                            </p>
+                        </div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                5
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:mt-0"></div>
+                    </div>
+                    
+                    <!-- Step 6 -->
+                    <div class="flex flex-col md:flex-row items-center md:mt-12">
+                        <div class="md:w-1/2 md:pr-12 mb-6 md:mb-0 order-1 md:order-none"></div>
+                        <div class="relative md:mx-auto z-10 flex-shrink-0 order-first md:order-none">
+                            <div class="bg-blue-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-xl font-bold shadow-lg">
+                                6
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 md:pl-12 md:text-left order-last md:order-none">
+                            <h3 class="text-2xl font-bold mb-3">Support & Maintenance</h3>
+                            <p class="text-gray-600">
+                                We provide ongoing support and maintenance to ensure your solution continues to perform optimally.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Don't just take our word for it. Here's what our clients have to say about working with us.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white rounded-xl shadow-md p-8 relative">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-4xl opacity-30"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8">
+                        "Kenix transformed our outdated website into a modern, user-friendly platform that has significantly increased our online presence and customer engagement."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4">
+                            <img src="/api/placeholder/50/50" alt="Client" class="w-full h-full rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Sarah Johnson</h4>
+                            <p class="text-gray-500 text-sm">CEO, FashionHub</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white rounded-xl shadow-md p-8 relative">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-4xl opacity-30"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8">
+                        "The mobile app developed by Kenix has streamlined our operations and improved customer satisfaction. Their team was professional, responsive, and delivered beyond our expectations."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4">
+                            <img src="/api/placeholder/50/50" alt="Client" class="w-full h-full rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Michael Chen</h4>
+                            <p class="text-gray-500 text-sm">CTO, TechInnovate</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white rounded-xl shadow-md p-8 relative">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-quote-left text-4xl opacity-30"></i>
+                    </div>
+                    <p class="text-gray-600 mb-8">
+                        "The AI solution provided by Kenix has revolutionized how we analyze customer data, leading to more targeted marketing strategies and increased ROI."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gray-300 rounded-full mr-4">
+                            <img src="/api/placeholder/50/50" alt="Client" class="w-full h-full rounded-full object-cover" />
+                        </div>
+                        <div>
+                            <h4 class="font-semibold">Emily Rodriguez</h4>
+                            <p class="text-gray-500 text-sm">Marketing Director, DataDrive</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Flexible Pricing Plans</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Choose the plan that best suits your business needs and budget.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Basic Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Basic</h3>
+                        <div class="flex items-end mb-6">
+                            <span class="text-4xl font-bold">$999</span>
+                            <span class="text-gray-500 ml-2">/ project</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Perfect for small businesses or startups looking for essential tech services.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Website/App Development (Basic)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>UI/UX Design (3 screens)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>2 rounds of revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>30 days support</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center py-3 px-6 border border-blue-600 rounded-md text-blue-600 font-medium hover:bg-blue-50 transition">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Pro Plan -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden transform scale-105 relative z-10 border-2 border-blue-500">
+                    <div class="absolute top-0 right-0 bg-blue-600 text-white py-1 px-4 text-sm font-medium">
+                        POPULAR
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Professional</h3>
+                        <div class="flex items-end mb-6">
+                            <span class="text-4xl font-bold">$2,499</span>
+                            <span class="text-gray-500 ml-2">/ project</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Ideal for growing businesses requiring comprehensive tech solutions.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Website/App Development (Advanced)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>UI/UX Design (10 screens)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>5 rounds of revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>60 days support</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Analytics integration</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center py-3 px-6 gradient-bg text-white rounded-md font-medium hover:opacity-90 transition">
+                            Get Started
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Enterprise Plan -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition-transform duration-300 hover:-translate-y-2">
+                    <div class="p-8">
+                        <h3 class="text-2xl font-bold mb-4">Enterprise</h3>
+                        <div class="flex items-end mb-6">
+                            <span class="text-4xl font-bold">Custom</span>
+                        </div>
+                        <p class="text-gray-600 mb-6">
+                            Tailored solutions for large businesses with complex requirements.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Custom tech solutions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Full-scale UI/UX design</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Unlimited revisions</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>Dedicated account manager</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mt-1 mr-2"></i>
+                                <span>12 months priority support</span>
+                            </li>
+                        </ul>
+                        <a href="#contact" class="block text-center py-3 px-6 border border-blue-600 rounded-md text-blue-600 font-medium hover:bg-blue-50 transition">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <p class="text-gray-600">
+                    Not sure which plan is right for you? <a href="#contact" class="text-blue-600 font-medium">Contact us</a> for a personalized quote.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 px-6">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Frequently Asked Questions</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Find answers to common questions about our services and processes.
+                </p>
+            </div>
+            
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold focus:outline-none">
+                        <span>How long does it typically take to complete a project?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">
+                            Project timelines vary depending on the scope and complexity. A basic website may take 2-4 weeks, while more complex applications or AI solutions can take 2-6 months. During our initial consultation, we'll provide you with a detailed timeline based on your specific requirements.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold focus:outline-none">
+                        <span>What information do you need to get started?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">
+                            To get started, we typically need a clear understanding of your business goals, target audience, and project requirements. Any existing branding materials, content, or design preferences are also helpful. Our team will guide you through the information-gathering process during the initial consultation.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold focus:outline-none">
+                        <span>Do you provide ongoing maintenance and support?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">
+                            Yes, we offer ongoing maintenance and support packages to ensure your solution continues to perform optimally. Depending on your needs, we can provide regular updates, security patches, performance monitoring, and technical support on a monthly or annual basis.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 4 -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold focus:outline-none">
+                        <span>Can you work with my existing systems or technologies?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">
+                            Absolutely! We specialize in integrating new solutions with existing systems and technologies. Whether you need to connect with a CRM, ERP, payment gateway, or any other platform, our team has the expertise to ensure seamless integration and data flow.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- FAQ Item 5 -->
+                <div class="bg-white rounded-xl shadow-sm">
+                    <button class="flex justify-between items-center w-full px-6 py-4 text-left font-semibold focus:outline-none">
+                        <span>How do you handle revisions or changes to the project?</span>
+                        <i class="fas fa-chevron-down text-blue-600"></i>
+                    </button>
+                    <div class="px-6 pb-6">
+                        <p class="text-gray-600">
+                            We understand that projects evolve, and changes may be necessary. Each of our packages includes a specific number of revision rounds. For changes that fall outside the original scope, we'll discuss the impact on timeline and budget before proceeding, ensuring full transparency throughout the process.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+                    <p class="text-xl text-gray-600 mb-8">
+                        Have a project in mind? Let's discuss how we can help you achieve your business goals.
+                    </p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Our Location</h3>
+                                <p class="text-gray-600">Bengaluru, Karnataka, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Email Us</h3>
+                                <p class="text-gray-600">info@Kenixtech.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="mr-4 bg-blue-100 text-blue-600 rounded-full w-10 h-10 flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold mb-2">Call Us</h3>
+                                <p class="text-gray-600">+91 9019058876 </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h3 class="text-lg font-semibold mb-4">Follow Us</h3>
+                        <div class="flex space-x-4">
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="#" class="bg-blue-100 text-blue-600 w-10 h-10 rounded-full flex items-center justify-center hover:bg-blue-200 transition">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <div class="bg-white rounded-xl shadow-md p-8">
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                                </div>
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="subject" class="block text-sm font-medium text-gray-700 mb-2">Subject</label>
+                                <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500">
+                            </div>
+                            
+                            <div class="mb-6">
+                                <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                                <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-blue-500 focus:border-blue-500"></textarea>
+                            </div>
+                            
+                            <div>
+                                <button type="submit" class="w-full gradient-bg text-white py-3 px-6 rounded-md font-medium hover:opacity-90 transition">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
